@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <!-- <script src="/tailwind.config.js"></script> -->
+        <link rel="stylesheet" href="css/output.css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Poppins;
+            }
+
+            #myBtn {
+                display: none; /* by default */
+                position: fixed; /* Fixed/sticky position */
+                bottom: 20px; /* Place the button at the bottom of the page */
+                right: 30px; /* Place the button 30px from the right */
+                z-index: 99; /* Make sure it does not overlap */
+                border: none; /* Remove borders */
+                outline: none; /* Remove outline */
+                background-color: rgb(
+                    33,
+                    125,
+                    255
+                ); /* Set a background color */
+                color: white; /* Text color */
+                cursor: pointer; /* Add a mouse pointer on hover */
+                padding: 15px; /* Some padding */
+                border-radius: 10px; /* Rounded corners */
+                font-size: 18px; /* Increase font size */
+            }
+
+            #myBtn:hover {
+                background-color: #555; /* Add a dark-grey background on hover */
+            }
+        </style>
+    </head>
+    <body class="scrollbar-hide">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <img class="w-8 h-auto" src="/asset/up.svg" alt="" />
+        </button>
+
+        <!-- NAVBAR -->
+        <div
+            class="nav flex flex-row justify-center sm:justify-between sm:mx-12 md:mx-24 my-4"
+        >
+            <h1 class="text-3xl font-bold select-none">KW</h1>
+            <ul
+                class="list-none select-none md:flex flex-row my-2 justify-center hidden align-middle"
+            >
+                <a
+                    class="md:mx-3 sm:mx-1 sm:block text-gray-400 duration-500 hover:text-black ease-in-out"
+                    href="#home"
+                    ><li class="sm:text-lg">Home</li></a
+                >
+                <a
+                    class="md:mx-3 sm:mx-1 sm:block text-gray-400 duration-500 hover:text-black ease-in-out"
+                    href="#skills"
+                    ><li class="text-lg">Skills</li></a
+                >
+                <a
+                    class="md:mx-3 sm:mx-1 sm:block text-gray-400 duration-500 hover:text-black ease-in-out"
+                    href="#project"
+                    ><li class="text-lg">Project</li></a
+                >
+                <!-- <a class="md:mx-3 sm:mx-1 sm:block text-gray-400 duration-500 hover:text-black ease-in-out" href="#about"><li class="text-lg">About me</li></a> -->
+                <a
+                    class="md:mx-3 sm:mx-1 sm:block text-gray-400 duration-500 hover:text-black ease-in-out"
+                    href="#contact"
+                    ><li class="text-lg">Contact Me</li></a
+                >
+            </ul>
+        </div>
+        <div class="w-11/12 mx-auto border border-gray-400"></div>
+        <!-- NAVBAR -->
+
+        <!-- HOME -->
+        <div class="w-full h-[100vh] xl:h-screen border border-white" id="home">
+            <div
+                class="h-[30%] xl:mt-80 md:mt-64 mt-[7.98rem] w-full p-6 lg:ps-20 flex flex-col-reverse justify-end lg:bg-gray-100 lg:flex-row md:align-middle lg:justify-between"
+            >
+                <div class="lg:text-start text-center flex flex-col">
+                    <div
+                        class="lg:w-1/4 flex justify-center lg:justify-start select-none"
+                    >
+                        <h1
+                            class="text-6xl text-center md:text-start font-bold"
+                        >
+                            Khoirudin Widiyansa
+                        </h1>
+                    </div>
+                    <h2 class="mt-2">
+                        developer dari 
+                        <span class="font-bold">
+                            <a href="https://pytagotech.com" class="text-indigo-600">Pytagotech</a>
+                        </span>
+                    </h2>
+                    <div class="">
+                        <h6 class="my-3 select-none py-1">
+                            <a class="bg-white rounded-md p-1" href="#skills"
+                                >Ui/Ux Designer</a
+                            >
+                            &
+                            <a
+                                class="bg-black text-white rounded-md p-1"
+                                href="#project"
+                                >Web developer</a
+                            >
+                        </h6>
+                        <a
+                            href="#contact"
+                            class="rounded-lg select-none md:text-base text-3xl bg-blue-700 px-2 py-1 text-white hover:bg-blue-900 hover:ease-in-out hover:duration-300"
+                        >
+                            Contact me</a
+                        >
+                    </div>
+                </div>
+                <div class="">
+                    <img
+                        class="lg:w-[75%] w-[18rem] sm:w-80 select-none -translate-y-28 mx-auto"
+                        src="/asset/foto profil.jpg"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+        <!-- HOME -->
+
+        <!-- SKILSS -->
+        <div class="w-full max-h-[200vh] xl:h-[100vh]" id="skills">
+            <div
+                class="bg-skill w-full h-[200vh] xl:h-screen absolute -z-10 opacity-40"
+            ></div>
+            <h1
+                class="font-bold text-3xl md:text-6xl text-center mt-12 select-none p-10"
+            >
+                Skills
+            </h1>
+            <div
+                class="flex flex-wrap gap-x-52 gap-y-24 justify-center pt-5"
+                id="skills-container"
+            ></div>
+            <div class="my-24 flex justify-center" data-aos="zoom-in">
+                <div class="md:w-[35rem] w-[20rem] px-9 py-4 border-4 rounded-xl border-green-600 flex flex-col bg-gray-200">
+                    <h3 class="font-bold lg:text-xl text-xl mb-5">I've worked with :</h3>
+                    <div id="logo-container" class="flex flex-wrap gap-5 items-center justify-start">
+                        <!-- Logo akan dimasukkan di sini oleh JavaScript -->
+                    </div>
+                </div>
+            </div>              
+        </div>
+        <!-- SKILLS -->
+        
+        <!-- PROJECT -->
+        <div
+            class="w-full h-[555vh] min-[1021px]:h-[300vh] min-[760px]:h-[560vh] xl:h-[120vh] 2xl:h-[100vh] border border-white select-none"
+            id="project"
+        >
+            <div
+                class="bg-project w-full h-[340vh] min-[1021px]:h-[300vh] min-[760px]:h-[560vh] xl:h-[130vh] absolute -z-10 opacity-20"
+            ></div>
+            <h1
+                class="font-bold text-3xl md:text-6xl text-center mt-12 select-none"
+            >
+                My Project
+            </h1>
+            <div
+                class="flex flex-col xl:mt-14 lg:flex-row lg:justify-around mt-10 text-3xl font-medium"
+            >
+                <div
+                    class="text-center flex xl:flex-wrap-reverse flex-wrap  gap-10 xl:w-[95%] h-[100%] md:w-[100%] xl:justify-center items-start"
+                    id="portfolio-container"
+                ></div>
+            </div>
+        </div>
+        <!-- PROJECT -->
+
+
+        <footer class="flex flex-col md:flex-row bg-gray-100" id="footer">
+            <div class="bg-footer w-full h-[31.9rem] absolute opacity-10"></div>
+            <div class="w-full md:w-[50%] my-3 z-10" id="contact">
+                <h1 class="text-xl font-bold text-center">Contact me</h1>
+                <div class="md:w-[80%] w-[70%] mx-auto mt-8">
+                    <form
+                        class="flex flex-col gap-4"
+                        name="kirim"
+                        method="post"
+                    >
+                        <label for="nama">Nama lengkap</label>
+                        <input
+                            class="border-2 px-3 py-1 border-black rounded-3xl focus:outline-none"
+                            type="text"
+                            placeholder="Nama lengkap"
+                            name="nama"
+                            id="nama"
+                        />
+                        <label for="email">Email</label>
+                        <input
+                            class="border-2 px-3 py-1 border-black rounded-3xl focus:outline-none"
+                            type="email"
+                            placeholder="Example@gmail.com"
+                            name="email"
+                            id="email"
+                        />
+                        <label for="desc">Deskripsi</label>
+                        <textarea
+                            class="border-2 p-3 border-black rounded-3xl focus:outline-none"
+                            name="deskripsi"
+                            placeholder="Deskripsi..."
+                            id="desc"
+                            cols="10"
+                            rows="5"
+                        ></textarea>
+                        <div class="hidden" id="terkirim">
+                            <i
+                                class="fa-solid fa-check text-green-500 fa-2x"
+                            ></i>
+                            <span class="text-green-700 font-bold text-lg"
+                                >pesan terkirim, arigatou gozaimasu</span
+                            >
+                        </div>
+                        <div class="select-none">
+                            <input
+                                type="submit"
+                                value="Submit"
+                                class="bg-green-700 text-white rounded-lg py-2 px-3"
+                            />
+                            <i
+                                class="fa-solid fa-circle-notch fa-spin text-blue-700 invisible"
+                                id="spinner"
+                            ></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col items-center m-auto z-10 bg-gray-100 rounded-xl p-10"
+            >
+                <div class="flex flex-row gap-4">
+                    <a
+                        href=""
+                        class="hover:scale-[1.5] duration-400 transition ease-linear"
+                        ><img src="/asset/sosmed/facebook.svg" alt=""
+                    /></a>
+                    <a
+                        href=""
+                        class="hover:scale-[1.5] duration-400 transition ease-linear"
+                        ><img src="/asset/sosmed//twitter.svg" alt=""
+                    /></a>
+                    <a
+                        href=""
+                        class="hover:scale-[1.5] duration-400 transition ease-linear"
+                        ><img src="/asset/sosmed//ig.svg" alt=""
+                    /></a>
+                </div>
+                <div class="border border-black w-[8.99rem] m-3"></div>
+                <div class="">
+                    <a href="#project">Project </a>|<a href="#footer">
+                        Contact us</a
+                    >
+                </div>
+                ©2023 Zoryudin
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+        <script>
+            // Get the button:
+            let mybutton = document.getElementById("myBtn");
+
+            AOS.init();
+
+            const scriptURL =
+                "https://script.google.com/macros/s/AKfycbwzOSgx5ms_9phKs7ndWcAcYtYS8_uG6MMJPNpBDNUeWQEVsgxVEpqCIIz4ASof7Mh-tg/exec";
+            const form = document.forms["kirim"];
+            const terkirim = document.getElementById("terkirim");
+            const spinner = document.getElementById("spinner");
+
+            //data logo:
+            const logos = [
+                "/asset/logo/html.png",
+                "/asset/logo/css.png",
+                "/asset/logo/js.png",
+                "/asset/logo/express-js.png",
+                "/asset/logo/laravel.png",
+                "/asset/logo/react.png",
+                "/asset/logo/vue.png",
+                "/asset/logo/unity.png",
+                "/asset/logo/Tailwind.png",
+                "/asset/logo/figma.svg",
+                // Tambah logo lainnya sesuai kebutuhan
+            ];
+
+            const logoContainer = document.getElementById("logo-container");
+
+            const portfolioData = [
+                // {
+                //     title: "Portofolio V1",
+                //     description:
+                //         "Ini adalah portofolio pertama saya yang bertemakan kartun, dan ini hanya menggunakan bahasa HTML dan CSS",
+                //     img: "/asset/image_project/website1.png",
+                //     link: "",
+                //     delay: 200,
+                // },
+                {
+                    title: "Sistem Penilaian LP3I",
+                    description:
+                        "Proyek ini merupakan pengalaman pertama saya selama masa magang di LP3I, di mana saya bertanggung jawab dalam merancang antarmuka dan pengalaman pengguna (UI/UX). Seluruh desain dikembangkan menggunakan platform Figma, dengan fokus pada kemudahan navigasi dan tampilan yang user-friendly.",
+                    img: "/asset/image_project/web_tugas_lp3i.png",
+                    link: "",
+                    github: "",
+                    delay: 200,
+                    is_pyta : false
+                },
+                {
+                    title: "Simulasi DJP LP3I",
+                    description:
+                        "Proyek ketiga saya untuk LP3I adalah pengembangan website simulasi Direktorat Jenderal Pajak (DJP). Dalam proyek ini, saya bertanggung jawab sebagai pengembang backend, dengan fokus pada pengelolaan data, logika proses, dan integrasi sistem. Aplikasi ini dirancang untuk mensimulasikan alur kerja layanan perpajakan sebagai bagian dari kegiatan pembelajaran di lingkungan akademik.",
+                    img: "/asset/image_project/sdjp_lp3i.jpg",
+                    link: "",
+                    github: "",
+                    delay: 300,
+                    is_pyta : false
+                },
+                {
+                    title: "Manajemen Perpustakaan LP3I",
+                    description:
+                        "Ini merupakan proyek kedua yang saya kerjakan untuk LP3I, berupa Sistem Informasi Perpustakaan berbasis web. Dalam proyek ini, saya merangkap peran sebagai desainer UI/UX dan juga pengembang backend. Sistem ini dirancang untuk mempermudah proses pengelolaan data buku, peminjaman, dan pengembalian, dengan antarmuka yang simpel serta sistem backend yang terstruktur.",
+                    img: "/asset/image_project/perpustakaan_lp3i.jpg",
+                    link: "",
+                    github: "",
+                    delay: 400,
+                    is_pyta : false
+                },
+                {
+                    title: "English Class Journey LP3I",
+                    description:
+                        "Proyek terakhir saya di LP3I adalah pengembangan website English Class Journey, sebuah platform penilaian yang dirancang khusus untuk kelas Bahasa Inggris. Dalam proyek ini, saya merangkap sebagai desainer UI/UX sekaligus pengembang backend. Fokus utama dari desain adalah menciptakan antarmuka yang ramah pengguna (user-friendly) dan mudah diakses oleh pengajar maupun siswa. Sistem ini memfasilitasi pencatatan dan pemantauan hasil belajar secara efisien.",
+                    img: "/asset/image_project/ecj_lp3i.jpg",
+                    link: "",
+                    github: "",
+                    delay: 500,
+                    is_pyta : false
+                },
+                {
+                    title: "Zoryunime",
+                    description:
+                        "Sebagai proyek eksploratif, saya mengembangkan antarmuka website yang terinspirasi dari MyAnimeList menggunakan Vue.js, Tailwind CSS, dan API Jikan. Proyek ini difokuskan pada pengembangan sisi frontend untuk meningkatkan pemahaman saya dalam membangun UI dinamis berbasis API.",
+                    img: "/asset/image_project/ZoryuNime.jpg",
+                    link: "",
+                    github: "https://github.com/KhoirudinW/Zoryunime",
+                    delay: 600,
+                    is_pyta : false
+                },
+                {
+                    title: "Digidaw GameShop",
+                    description:
+                        "Proyek ini merupakan bagian dari tugas sekolah bertema game shop, di mana saya bertanggung jawab sebagai pengembang frontend. Antarmuka dibangun menggunakan React.js dan Tailwind CSS untuk menciptakan tampilan yang modern dan responsif. Pada tahap ini, data masih disimpan secara lokal menggunakan JavaScript untuk keperluan simulasi.",
+                    img: "/asset/image_project/digidaw_gameshop.jpg",
+                    link: "https://digidaw.vercel.app/home",
+                    github: "https://github.com/KhoirudinW/digidaw",
+                    delay: 700,
+                    is_pyta : false
+                },
+                {
+                    title: "AR Solar System",
+                    description:
+                        "Proyek ini merupakan proyek pertama saya di Pytagotech, yaitu pengembangan aplikasi AR Solar System. Dalam proyek ini, saya bertanggung jawab penuh dalam membangun sistem serta menyediakan aset visual yang dibutuhkan. Proses pengembangan dilakukan menggunakan Unity untuk implementasi AR, Blender untuk pemodelan 3D, dan CorelDraw untuk kebutuhan desain grafis. Proyek ini menggabungkan elemen visual dan teknologi augmented reality untuk menciptakan pengalaman belajar yang interaktif dan edukatif.",
+                    img: "/asset/image_project/ar_solar_system.jpg",
+                    link: "",
+                    github: "",
+                    delay: 800,
+                    is_pyta : true
+                },
+                {
+                    title: "MathVenture",
+                    description:
+                        "Proyek ini merupakan game 2D platformer bertema matematika yang saya kembangkan secara mandiri sebagai proyek eksploratif. Game ini dibangun menggunakan engine Godot, dengan aset visual yang dikurasi dari sumber terbuka di internet. Fokus utama dari proyek ini adalah eksperimen terhadap mekanisme permainan berbasis edukasi. Seluruh pengembangan diselesaikan dalam waktu satu minggu sebagai bentuk latihan keterampilan dan manajemen waktu dalam pengembangan game.",
+                    img: "/asset/image_project/mathventure.jpg",
+                    link: "",
+                    github: "https://github.com/KhoirudinW/MathVenture",
+                    delay: 900,
+                    is_pyta : true
+                },
+            ];
+
+            const container = document.getElementById("portfolio-container");
+
+            const skillsData = [
+                {
+                    title: "Ui & Ux",
+                    description:
+                        "Saya telah berkesempatan dan mendesain pengalaman pengguna yang inovatif, fokus pada peningkatan kualitas interaksi antara pengguna dan produk, serta menciptakan antarmuka yang intuitif untuk meningkatkan kepuasan pengguna.",
+                    aos: "flip-right",
+                },
+                {
+                    title: "Programming",
+                    description:
+                        "Dengan ilmu yang di ajarkan di sekolah, saya telah berhasil mengembangkan perangkat lunak yang berkualitas tinggi dan efisien untuk memecahkan berbagai tantangan teknis, serta berkontribusi pada proyek-proyek.",
+                    aos: "flip-left",
+                },
+            ];
+
+            const skillsContainer = document.getElementById("skills-container");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (
+                    document.body.scrollTop > 20 ||
+                    document.documentElement.scrollTop > 20
+                ) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                spinner.classList.toggle("invisible");
+                fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                    .then((response) => {
+                        console.log("Success!", response);
+                        spinner.classList.toggle("invisible");
+                        terkirim.classList.toggle("hidden");
+                        form.reset();
+                    })
+                    .catch((error) => console.error("Error!", error.message));
+            });
+
+            portfolioData.forEach((item) => {
+                const element = document.createElement("div");
+                element.className =
+                    "group mx-auto flex flex-col md:flex-col-reverse lg:flex-col-reverse xl:gap-5 overflow-hidden w-full max-w-[25rem] h-auto xl:h-[14.063rem]"; // Lebih fleksibel
+
+                element.setAttribute("data-aos", "flip-up");
+                element.setAttribute("data-aos-offset", "200");
+                element.setAttribute("data-aos-delay", item.delay);
+                element.setAttribute("data-aos-duration", "1150");
+
+                element.innerHTML = `
+                    <div class="relative xl:absolute xl:bg-gradient-to-r from-black from-20% to-transparent z-10 xl:text-white xl:duration-700 ease-out text-start w-full p-5 xl:w-[20rem] xl:h-[14.05rem] xl:-left-[25rem] group-hover:left-0 overflow-y-auto scrollbar-hide">
+                        <h1 class="flex items-center gap-2 font-semibold text-lg">
+                            ${item.title}
+                            <a href="https://www.pytagotech.com/">    
+                                <img src="/asset/logo/pytagotech.png" class="w-5 ${item.is_pyta ? "" : "hidden"}" alt="">
+                            </a>
+                        </h1>
+                        <p class="text-sm font-light mt-2">${item.description}</p>
+                        <div class="flex flex-col mt-4 space-y-1">
+                            <a class="text-blue-700 ${item.link === "" ? "hidden" : ""}" href="${item.link}" target="_blank">Link</a>
+                            <a class="text-blue-700 ${item.github === "" ? "hidden" : ""}" href="${item.github}" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <img class="w-full h-[225px] object-cover xl:group-hover:brightness-75 duration-1000 ease-out" src="${item.img}" alt="">
+                `;
+
+                container.appendChild(element);
+            });
+
+
+            skillsData.forEach((skill) => {
+                const card = document.createElement("div");
+                card.className =
+                    "md:w-[35rem] w-[20rem] px-9 py-4 border-4 rounded-xl border-green-600 justify-center flex md:flex-row flex-col bg-gray-200";
+                card.setAttribute("data-aos", skill.aos);
+                card.setAttribute("data-aos-offset", "250");
+                card.setAttribute("data-aos-duration", "1200");
+
+                card.innerHTML = `
+                    <div class="my-auto">
+                        <h3 class="font-bold lg:text-3xl text-xl mb-3">${skill.title}</h3>
+                        <p>${skill.description}</p>
+                    </div>
+                `;
+
+                skillsContainer.appendChild(card);
+            });
+
+            logos.forEach(src => {
+                const img = document.createElement("img");
+                img.src = src;
+                img.alt = "Tech Logo";
+                img.className = "h-12 w-auto object-contain"; // Tinggi sama, tidak stretch
+
+                logoContainer.appendChild(img);
+            });
+        </script>
+    </body>
+</html>
